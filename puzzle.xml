@@ -40,10 +40,10 @@
     <void method="add">
      <object class="date.CelulaPuzzle">
       <void property="indice">
-       <int>7</int>
+       <int>3</int>
       </void>
       <void property="val">
-       <int>8</int>
+       <int>4</int>
       </void>
      </object>
     </void>
@@ -60,20 +60,20 @@
     <void method="add">
      <object class="date.CelulaPuzzle">
       <void property="indice">
-       <int>3</int>
+       <int>6</int>
       </void>
       <void property="val">
-       <int>4</int>
+       <int>7</int>
       </void>
      </object>
     </void>
     <void method="add">
      <object class="date.CelulaPuzzle">
       <void property="indice">
-       <int>6</int>
+       <int>7</int>
       </void>
       <void property="val">
-       <int>7</int>
+       <int>8</int>
       </void>
      </object>
     </void>

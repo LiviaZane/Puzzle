@@ -4,13 +4,13 @@ package date;
 
 public class CelulaPuzzle {
 
-	private int indice;                                                               // indice = lin * dim + col
-	private int val;                                                                  // valoarea din celula
+	private int indice;                                                                 // indice = lin * dim + col
+	private int val;                                                                    // valoarea din celula
 
-	public CelulaPuzzle() {}                                                          // constructor implicit
+	public CelulaPuzzle() {}                                                            // constructor implicit
 
 	public int getIndice() {
-		return indice;                                                                // getteri si setteri
+		return indice;                                                                  // getteri si setteri
 	}
                                                 // ... necesari pentru serializare/utilizare XMLEncoder si XMLDecoder din pachetul java.beans,
 	public void setIndice(int in) {                   // pentru salvare/restaurare obiecte in/din fisiere XML
