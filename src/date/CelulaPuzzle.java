@@ -27,7 +27,7 @@ public class CelulaPuzzle {
 
 										                        // suprascrierea metodei toString, folosita pentru testare
 	@Override                                                   // spre finalul aplicatiei va fi stearsa
-	public String toString() {
+	public String toString() {												// converterteste din ceva in string
 		return "CelulaPuzzle [indice=" + indice + ", val=" + val + "]";
 	}
 

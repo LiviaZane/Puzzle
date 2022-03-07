@@ -73,7 +73,7 @@ public class TablaPuzzle {
 		if(i-1 >= 0) {                                              // daca exista o celula deasupra celulei goale
 			vecini.add((i-1)*(JocPuzzle.dim_puzzle)+j);                   // adaugam indicele ei la vectorul vecini
 		} 
-		if(i+1 < (int)Math.sqrt(tabla.size())) {                    // daca exista o celula sub celula goala
+		if(i+1 < JocPuzzle.dim_puzzle) {                    // daca exista o celula sub celula goala
 			vecini.add((i+1)*(JocPuzzle.dim_puzzle)+j);                   // adaugam indicele ei la vectorul vecini
 		} 
 		if(j-1 >= 0) {                                              // daca exista o celula in stanga celulei goale
@@ -100,7 +100,7 @@ public class TablaPuzzle {
 		if (contor == JocPuzzle.dim_puzzle * JocPuzzle.dim_puzzle) {         // daca toate celulele sunt conform solutiei
 			System.out.print("Joc finalizat ");                              // afisam mesaj   
 			try {                                              			// si sterg fisier de salvare joc (daca exista pe disc)
-		         File fisier = new File("puzzle.xml");
+				File fisier = new File("puzzle.xml");
 		         if (fisier.exists()) {                                         // daca fisierul exista pe disc
 					fisier.delete();                                            // il stergem
 					}
@@ -113,8 +113,6 @@ public class TablaPuzzle {
 			return false;                         // sunt egali cu cei initiali (solutia) si iese cu fals
 		}
 	}
-	
-	
 	
 	public void AfisareTabla() {                                // va fi inlocuita in versiunile urmatoare de afisare in GUI
 		for (int i = 0; i < JocPuzzle.dim_puzzle; i++) {

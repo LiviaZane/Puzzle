@@ -31,9 +31,8 @@ public class JocPuzzle {
 			joc_nou = keyboard.nextInt();
 		} while(joc_nou < 0 || joc_nou > 1);
 		TablaPuzzle tablaPuzzle = new TablaPuzzle();                         // puzzle de lucru,  pe care il vom afisa pe ecran
-		tablaPuzzle.setTabla(cp);
+		tablaPuzzle.setTabla(cp);											// copiem vectorul de celule in tabla de lucru
 		if (joc_nou == 0) {
-			tablaPuzzle.setTabla(cp);                                        // copiem vectorul de celule in tabla de lucru
 			tablaPuzzle.AmestecareCelule();                                  // amestecam aleatoriu celulele tablei de lucru 
 		} else {                                         // optiunea pentru citire date din fisier xml ... joc salvat anterior
 			try {
@@ -41,8 +40,7 @@ public class JocPuzzle {
 		         if (fisier.exists()) {                                         // daca fisierul exista pe disc
 						tablaPuzzle = SerializareXML.deserializeazaXMP();         // citesc tablaPuzzle din fisier XML de pe disc
 						dim_puzzle = (int)Math.sqrt(tablaPuzzle.getTabla().size()); // resetez var globala la dim tablei salvate pe disc
-					} else {                                                      // daca nu exista fisier pe disc
-						tablaPuzzle.setTabla(cp);                                      // continuam cu joc nou
+					} else {                                                      // daca nu exista fisier pe disc continuam cu joc nou
 						tablaPuzzle.AmestecareCelule();
 				         System.out.println("Nu exista fisier pe disc, continuam cu joc nou.");
 					}
@@ -71,24 +69,3 @@ public class JocPuzzle {
 	
 }
 
-
-
-//in GUI o sa am o zona in care afisez celulele sub forma unor butoane
-      // marimea butoanelor va fi calculata in functie de dimensiunea puzzle-ului
-//cand se da click cu mouse pe o celula/buton, se face swap cu celula goala, 
-      // numai daca ii este vecina celula goala, altfel afiseaza mesaj "Nu poate fi mutata"
-//in alta zona din GUI o sa am butoane pentru:
-      // SalvareJoc ... activ dupa AmestecareCelule si cat timp jocul nu este finalizat
-      // IncarcareJocSalvat...activ daca exista un fisier in care a fost salvat jocul
-		         // dupa o finalizare a unui joc, fisierul se sterge (daca exista pe disc)
-      // JocNou ..... se reconstruiesc tablele, inclusiv se amesteca celulele 
-//daca se apasa unul dintre butoane se iese din do-while cu break;
-//pentru puzzle cu imagine, voi aduce dimensiunea imaginii la dimensiunea in care se afiseaza puzzle-ul,
-		 // apoi o voi descompune in dim*dim parti, pe care le voi afisa in butoane 
-//si daca va fi timp, voi pune si un buton/label "MutareaUrmatoare" ...solutia calculata cu BackTracking,
-         // pentru ca se va iesi din solutia optima la fiecare mutare facuta altfel de jucator
-
-//jocul nu poate avea o configuratie la un moment dat care sa nu aiba solutie, pentru ca metoda AmestecareCelule() 
-//muta o celula in locul celulei goale vecina (conform regulei jocului) de dim*dim*dim ori, pornind de la solutie
-        // din documentare am aflat ca daca e necesar un numar impar de swap-uri, jocul nu are solutie
-	       // de exemplu 1 2 3   4 5 6  8 7 0 ... nu are solutie....nu poate fi finalizat...

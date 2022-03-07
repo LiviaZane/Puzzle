@@ -13,43 +13,6 @@
     <void method="add">
      <object class="date.CelulaPuzzle">
       <void property="indice">
-       <int>2</int>
-      </void>
-      <void property="val">
-       <int>3</int>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="date.CelulaPuzzle">
-      <void property="indice">
-       <int>4</int>
-      </void>
-      <void property="val">
-       <int>5</int>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="date.CelulaPuzzle">
-      <void property="indice">
-       <int>8</int>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="date.CelulaPuzzle">
-      <void property="indice">
-       <int>3</int>
-      </void>
-      <void property="val">
-       <int>4</int>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="date.CelulaPuzzle">
-      <void property="indice">
        <int>1</int>
       </void>
       <void property="val">
@@ -60,6 +23,53 @@
     <void method="add">
      <object class="date.CelulaPuzzle">
       <void property="indice">
+       <int>2</int>
+      </void>
+      <void property="val">
+       <int>3</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>3</int>
+      </void>
+      <void property="val">
+       <int>4</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>4</int>
+      </void>
+      <void property="val">
+       <int>5</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>5</int>
+      </void>
+      <void property="val">
+       <int>6</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>8</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
        <int>6</int>
       </void>
       <void property="val">
@@ -74,16 +84,6 @@
       </void>
       <void property="val">
        <int>8</int>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="date.CelulaPuzzle">
-      <void property="indice">
-       <int>5</int>
-      </void>
-      <void property="val">
-       <int>6</int>
       </void>
      </object>
     </void>
