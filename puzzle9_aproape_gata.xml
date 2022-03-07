@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.2" class="java.beans.XMLDecoder">
+ <object class="date.TablaPuzzle">
+  <void property="tabla">
+   <object class="java.util.Vector">
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="val">
+       <int>1</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>1</int>
+      </void>
+      <void property="val">
+       <int>2</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>2</int>
+      </void>
+      <void property="val">
+       <int>3</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>3</int>
+      </void>
+      <void property="val">
+       <int>4</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>4</int>
+      </void>
+      <void property="val">
+       <int>5</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>5</int>
+      </void>
+      <void property="val">
+       <int>6</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>6</int>
+      </void>
+      <void property="val">
+       <int>7</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>7</int>
+      </void>
+      <void property="val">
+       <int>8</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>8</int>
+      </void>
+      <void property="val">
+       <int>9</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>9</int>
+      </void>
+      <void property="val">
+       <int>10</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>10</int>
+      </void>
+      <void property="val">
+       <int>11</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>11</int>
+      </void>
+      <void property="val">
+       <int>12</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>12</int>
+      </void>
+      <void property="val">
+       <int>13</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>13</int>
+      </void>
+      <void property="val">
+       <int>14</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>14</int>
+      </void>
+      <void property="val">
+       <int>15</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>15</int>
+      </void>
+      <void property="val">
+       <int>16</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>16</int>
+      </void>
+      <void property="val">
+       <int>17</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>17</int>
+      </void>
+      <void property="val">
+       <int>18</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>18</int>
+      </void>
+      <void property="val">
+       <int>19</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>19</int>
+      </void>
+      <void property="val">
+       <int>20</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>20</int>
+      </void>
+      <void property="val">
+       <int>21</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>21</int>
+      </void>
+      <void property="val">
+       <int>22</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>22</int>
+      </void>
+      <void property="val">
+       <int>23</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>23</int>
+      </void>
+      <void property="val">
+       <int>24</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>24</int>
+      </void>
+      <void property="val">
+       <int>25</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>25</int>
+      </void>
+      <void property="val">
+       <int>26</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>26</int>
+      </void>
+      <void property="val">
+       <int>27</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>27</int>
+      </void>
+      <void property="val">
+       <int>28</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>28</int>
+      </void>
+      <void property="val">
+       <int>29</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>29</int>
+      </void>
+      <void property="val">
+       <int>30</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>30</int>
+      </void>
+      <void property="val">
+       <int>31</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>31</int>
+      </void>
+      <void property="val">
+       <int>32</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>32</int>
+      </void>
+      <void property="val">
+       <int>33</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>33</int>
+      </void>
+      <void property="val">
+       <int>34</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>34</int>
+      </void>
+      <void property="val">
+       <int>35</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>35</int>
+      </void>
+      <void property="val">
+       <int>36</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>36</int>
+      </void>
+      <void property="val">
+       <int>37</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>37</int>
+      </void>
+      <void property="val">
+       <int>38</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>38</int>
+      </void>
+      <void property="val">
+       <int>39</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>39</int>
+      </void>
+      <void property="val">
+       <int>40</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>40</int>
+      </void>
+      <void property="val">
+       <int>41</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>41</int>
+      </void>
+      <void property="val">
+       <int>42</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>42</int>
+      </void>
+      <void property="val">
+       <int>43</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>43</int>
+      </void>
+      <void property="val">
+       <int>44</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>44</int>
+      </void>
+      <void property="val">
+       <int>45</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>45</int>
+      </void>
+      <void property="val">
+       <int>46</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>46</int>
+      </void>
+      <void property="val">
+       <int>47</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>47</int>
+      </void>
+      <void property="val">
+       <int>48</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>48</int>
+      </void>
+      <void property="val">
+       <int>49</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>49</int>
+      </void>
+      <void property="val">
+       <int>50</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>50</int>
+      </void>
+      <void property="val">
+       <int>51</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>51</int>
+      </void>
+      <void property="val">
+       <int>52</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>52</int>
+      </void>
+      <void property="val">
+       <int>53</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>53</int>
+      </void>
+      <void property="val">
+       <int>54</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>54</int>
+      </void>
+      <void property="val">
+       <int>55</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>55</int>
+      </void>
+      <void property="val">
+       <int>56</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>56</int>
+      </void>
+      <void property="val">
+       <int>57</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>57</int>
+      </void>
+      <void property="val">
+       <int>58</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>58</int>
+      </void>
+      <void property="val">
+       <int>59</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>59</int>
+      </void>
+      <void property="val">
+       <int>60</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>60</int>
+      </void>
+      <void property="val">
+       <int>61</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>61</int>
+      </void>
+      <void property="val">
+       <int>62</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>62</int>
+      </void>
+      <void property="val">
+       <int>63</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>63</int>
+      </void>
+      <void property="val">
+       <int>64</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>64</int>
+      </void>
+      <void property="val">
+       <int>65</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>65</int>
+      </void>
+      <void property="val">
+       <int>66</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>66</int>
+      </void>
+      <void property="val">
+       <int>67</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>67</int>
+      </void>
+      <void property="val">
+       <int>68</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>68</int>
+      </void>
+      <void property="val">
+       <int>69</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>69</int>
+      </void>
+      <void property="val">
+       <int>70</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>70</int>
+      </void>
+      <void property="val">
+       <int>71</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>71</int>
+      </void>
+      <void property="val">
+       <int>72</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>72</int>
+      </void>
+      <void property="val">
+       <int>73</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>73</int>
+      </void>
+      <void property="val">
+       <int>74</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>74</int>
+      </void>
+      <void property="val">
+       <int>75</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>75</int>
+      </void>
+      <void property="val">
+       <int>76</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>76</int>
+      </void>
+      <void property="val">
+       <int>77</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>77</int>
+      </void>
+      <void property="val">
+       <int>78</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>78</int>
+      </void>
+      <void property="val">
+       <int>79</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>80</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>79</int>
+      </void>
+      <void property="val">
+       <int>80</int>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

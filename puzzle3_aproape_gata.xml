@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.2" class="java.beans.XMLDecoder">
+ <object class="date.TablaPuzzle">
+  <void property="tabla">
+   <object class="java.util.Vector">
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="val">
+       <int>1</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>1</int>
+      </void>
+      <void property="val">
+       <int>2</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>2</int>
+      </void>
+      <void property="val">
+       <int>3</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>3</int>
+      </void>
+      <void property="val">
+       <int>4</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>4</int>
+      </void>
+      <void property="val">
+       <int>5</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>5</int>
+      </void>
+      <void property="val">
+       <int>6</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>8</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>6</int>
+      </void>
+      <void property="val">
+       <int>7</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>7</int>
+      </void>
+      <void property="val">
+       <int>8</int>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
