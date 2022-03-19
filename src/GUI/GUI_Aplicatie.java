@@ -13,12 +13,13 @@ import javax.swing.JPanel;
 import date.TablaPuzzle;
 
 public class GUI_Aplicatie implements Observator {
-	JFrame frame;
-	JPanel panel;
+	private JFrame frame;
+	private JPanel panel;
+	private int dim_puzz;
 
 	public GUI_Aplicatie(TablaPuzzle tablaPuzzle) {  
-		int dim_puzz = tablaPuzzle.getDim_puzzle(); 
-	    frame = new JFrame();                               // fereastra/window
+		dim_puzz = tablaPuzzle.getDim_puzzle(); 
+	    frame = new JFrame("Joc Puzzle");                               // fereastra/window
 	    frame.setSize(1100, 700);
 	    frame.setLayout(null);
 	    panel = new JPanel();                         // un container in care vom pune butoanele puzzle
@@ -28,7 +29,7 @@ public class GUI_Aplicatie implements Observator {
 	    	for (int j = 0; j < dim_puzz; j++) {
 	    		int a = tablaPuzzle.getTabla().elementAt(i*dim_puzz+j).getVal();
 	    		JButton b = new JButton(Integer.toString(a));                  // text afisat in btn
-	    		b.setBounds(j*600/dim_puzz, i*600/dim_puzz, 600/dim_puzz, 600/dim_puzz); //x, y, l, h
+	    		b.setBounds(j*650/dim_puzz, i*650/dim_puzz, 650/dim_puzz, 650/dim_puzz); //x, y, l, h
 	    		b.setMargin(new Insets(0, 0, 0, 0));
 	    		b.setFont(new Font("Arial", Font.PLAIN, 160/dim_puzz));
 	    		if(a == 0) {
@@ -64,31 +65,19 @@ public class GUI_Aplicatie implements Observator {
 	
 	@Override
 	public void update(TablaPuzzle tablaPuzzle) {
-		panel.removeAll();
-		int dim_puzz = tablaPuzzle.getDim_puzzle(); 
 		for (int i = 0; i < dim_puzz; i++) {
 	    	for (int j = 0; j < dim_puzz; j++) {
 	    		int a = tablaPuzzle.getTabla().elementAt(i*dim_puzz+j).getVal();
-	    		JButton b = new JButton(Integer.toString(a));
-	    		b.setBounds(j*600/dim_puzz, i*600/dim_puzz, 600/dim_puzz, 600/dim_puzz); //x, y, l, h
-	    		b.setMargin(new Insets(0, 0, 0, 0));
-	    		b.setFont(new Font("Arial", Font.PLAIN, 160/dim_puzz));
+	    		JButton b = (JButton) panel.getComponent(i*dim_puzz+j);
+	    		b.setText(Integer.toString(a));
 	    		if(a == 0) {
 	    			b.setForeground(Color.RED);
+	    		} else {
+	    			b.setForeground(Color.BLACK);
 	    		}
-	    		b.setName(String.valueOf(i*dim_puzz+j));
-	    		b.addActionListener(new ActionListener()
-				{
-					public void actionPerformed(ActionEvent e)
-					{
-						int i=Integer.parseInt(b.getName());  
-						tablaPuzzle.MutaCelula(i);
-					}
-				});
-	    		panel.add(b);
 	    	}
 	    }
 		frame.repaint();
-	}                             // end update
+	}
 	
 }
