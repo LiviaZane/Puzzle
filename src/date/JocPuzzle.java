@@ -1,23 +1,29 @@
 package date;
 
-import java.util.Scanner;                                                   // pentru citire de la tastatura
+import java.util.Scanner;                                                   
 import java.util.Vector;
-import java.io.File;                                                        // pentru verificare daca exista fisier XML pe disc
 
-public class JocPuzzle {
-	
-	static int dim_puzzle = 0;                                               // dimensiunea puzzle-ului.....variabila globala
+import javax.imageio.ImageIO;
+
+import GUI.GUI_Aplicatie;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;                                                        
+
+public class JocPuzzle {                                             
 
 	public static void main(String[] args) {
 		
 		Scanner keyboard = new Scanner(System.in);                           // initializam citirea de la tastatura
+		int dim = 0;
 		do {
 			System.out.print("Marime puzzle (nr.impar): ");
-			dim_puzzle = keyboard.nextInt();                                 // citim dimensiunea puzzle-ului
-		} while(dim_puzzle % 2 == 0);                                        // pana se introduce un numar impar
+			dim = keyboard.nextInt();                                 
+		} while(dim % 2 == 0);                                        // citim pana se introduce un numar impar
 		
-		Vector<CelulaPuzzle> cp = new Vector<CelulaPuzzle>(dim_puzzle * dim_puzzle);          //vector cu celulele puzzle-ului
-		for (int i = 0; i < dim_puzzle * dim_puzzle; i++) {        // pe care il vom copia intr-un obiect din clasa TablePuzzle
+		Vector<CelulaPuzzle> cp = new Vector<CelulaPuzzle>(dim * dim);          
+		for (int i = 0; i < dim * dim; i++) {        
 				CelulaPuzzle celulaCurenta = new CelulaPuzzle();
 				celulaCurenta.setIndice(i);
 				celulaCurenta.setVal(i+1);
@@ -25,22 +31,26 @@ public class JocPuzzle {
 		}
 		cp.lastElement().setVal(0);                                     // setam ultimul element ca fiind zero...celula goala
 		
-		int joc_nou = 0;                                               // pentru citire joc nou sau salvare de pe disc
+		int joc_nou = 0;                                               
 		do {
 			System.out.print("Joc nou (0) sau salvat de pe disc (1): ");
 			joc_nou = keyboard.nextInt();
 		} while(joc_nou < 0 || joc_nou > 1);
-		TablaPuzzle tablaPuzzle = new TablaPuzzle();                         // puzzle de lucru,  pe care il vom afisa pe ecran
-		tablaPuzzle.setTabla(cp);											// copiem vectorul de celule in tabla de lucru
+		TablaPuzzle tablaPuzzle = new TablaPuzzle();                         
 		if (joc_nou == 0) {
-			tablaPuzzle.AmestecareCelule();                                  // amestecam aleatoriu celulele tablei de lucru 
-		} else {                                         // optiunea pentru citire date din fisier xml ... joc salvat anterior
+			tablaPuzzle.setTabla(cp);
+			tablaPuzzle.setDim_puzzle(dim);
+			tablaPuzzle.AmestecareCelule();                                  
+		} else {                                         
 			try {
 		         File fisier = new File("puzzle.xml");
-		         if (fisier.exists()) {                                         // daca fisierul exista pe disc
-						tablaPuzzle = SerializareXML.deserializeazaXMP();         // citesc tablaPuzzle din fisier XML de pe disc
-						dim_puzzle = (int)Math.sqrt(tablaPuzzle.getTabla().size()); // resetez var globala la dim tablei salvate pe disc
-					} else {                                                      // daca nu exista fisier pe disc continuam cu joc nou
+		         if (fisier.exists()) {                                         
+						tablaPuzzle = SalvareXML.citesteXML();         								//
+						dim = (int)Math.sqrt(tablaPuzzle.getTabla().size()); 
+						tablaPuzzle.setDim_puzzle(dim);
+					} else {   
+						tablaPuzzle.setTabla(cp);
+						tablaPuzzle.setDim_puzzle(dim);
 						tablaPuzzle.AmestecareCelule();
 				         System.out.println("Nu exista fisier pe disc, continuam cu joc nou.");
 					}
@@ -50,12 +60,17 @@ public class JocPuzzle {
 		}
 		tablaPuzzle.AfisareTabla();
 
-		int val = 0;                      // indicele celulei care se doreste a fi mutata sau -1 pentru salvare joc
+		
+		GUI_Aplicatie aplicatie = new GUI_Aplicatie(tablaPuzzle);
+		tablaPuzzle.adaugareObservator(aplicatie);
+		
+		
+		int val = 0;                      // indicele celulei care se doreste a fi mutata
 		do { 
 			System.out.print("Indice celula (012 345 678) care se doreste a fi mutata sau -1 pentru salvare joc: ");
 			val = keyboard.nextInt();
 			if (val == -1) {
-				SerializareXML.serializeazaXML(tablaPuzzle); // salvez tablaPuzzle in fisier XML pe disc
+				SalvareXML.scrieXML(tablaPuzzle); 
 				System.out.print("Jocul a fost salvat in fisier pe disc.");
 			} else {
 				tablaPuzzle.MutaCelula(val);
@@ -64,8 +79,31 @@ public class JocPuzzle {
 		} while((!tablaPuzzle.JocFinalizat()) && val != -1);
 
 		keyboard.close();
+		
+		
+		
+		// testare spargere imagine
+		String a = "img/poza.jpg"; 	
+    	BufferedImage imagini[] = new BufferedImage[dim * dim];    // creez vect img
+    	try {
+			imagini = Imagine.spargeImagine(a, dim);   // intoarce vectorul de imag -- trateaza exceptia primita cu throw din imagine.java
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	 //scriem de control subImaginile
+        for (int i = 0; i < dim * dim; i++) {
+            try {
+				ImageIO.write(imagini[i], "png", new File("img/",i + ".png"));   // scrie fiecare fisier din vector
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
+        // testare spargere imagine
+        
 
 	}
 	
 }
-

@@ -4,16 +4,17 @@ package date;
 
 public class CelulaPuzzle {
 
-	private int indice;                                                                 // indice = lin * dim + col
-	private int val;                                                                    // valoarea din celula
+	private int indice;                                                                 
+	private int val;       
+	
 
-	public CelulaPuzzle() {}                                                            // constructor implicit
+	public CelulaPuzzle() {}                                                            
 
 	public int getIndice() {
-		return indice;                                                                  // getteri si setteri
+		return indice;                                                                  
 	}
-                                                // ... necesari pentru serializare/utilizare XMLEncoder si XMLDecoder din pachetul java.beans,
-	public void setIndice(int in) {                   // pentru salvare/restaurare obiecte in/din fisiere XML
+                                                
+	public void setIndice(int in) {                   
 		this.indice = in;
 	}
 
@@ -23,12 +24,6 @@ public class CelulaPuzzle {
 
 	public void setVal(int val) {
 		this.val = val;
-	}
-
-										                        // suprascrierea metodei toString, folosita pentru testare
-	@Override                                                   // spre finalul aplicatiei va fi stearsa
-	public String toString() {												// converterteste din ceva in string
-		return "CelulaPuzzle [indice=" + indice + ", val=" + val + "]";
 	}
 
 }
