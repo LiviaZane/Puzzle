@@ -7,3 +7,6 @@ public class FactoryCelulaPuzzle extends AbstractFactory{		// creeaza obiecte
 		return new CelulaPuzzle();	
 	}
 }
+
+
+//

@@ -141,3 +141,5 @@ public class GUI_Aplicatie implements Observator {
 	}
 	
 }
+
+//

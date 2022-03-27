@@ -7,3 +7,7 @@ public class FactoryCelulaPuzzle_sterge extends AbstractFactory {
 		return new CelulaPuzzle_sterge();
 	}
 }
+
+
+
+//
