@@ -5,7 +5,7 @@ package date;
 public class CelulaPuzzle {
 
 	private int indice;                                                                 
-	private int val;       
+	private String val;       
 	
 
 	public CelulaPuzzle() {}                                                            
@@ -18,11 +18,11 @@ public class CelulaPuzzle {
 		this.indice = in;
 	}
 
-	public int getVal() {
+	public String getVal() {
 		return val;
 	}
 
-	public void setVal(int val) {
+	public void setVal(String val) {
 		this.val = val;
 	}
 

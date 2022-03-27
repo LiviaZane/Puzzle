@@ -60,13 +60,13 @@ public class TablaPuzzle {
 	private int CelulaGoala(int indice_c) {    
 		int i = indice_c / dim_puzzle;                 
 		int j = indice_c % dim_puzzle;
-		if(i-1 >= 0 && tabla.elementAt((i-1)*(dim_puzzle)+j).getVal() == 0) {  
+		if(i-1 >= 0 && tabla.elementAt((i-1)*(dim_puzzle)+j).getIndice() == dim_puzzle*dim_puzzle-1) {  
 			return (i-1)*(dim_puzzle)+j;
-		} else if(i+1 < dim_puzzle && tabla.elementAt((i+1)*(dim_puzzle)+j).getVal() == 0) {      
+		} else if(i+1 < dim_puzzle && tabla.elementAt((i+1)*(dim_puzzle)+j).getIndice() == dim_puzzle*dim_puzzle-1) {      
 			return (i+1)*(dim_puzzle)+j;
-		} else if(j-1 >= 0 && tabla.elementAt(i*dim_puzzle+j-1).getVal() == 0) { 
+		} else if(j-1 >= 0 && tabla.elementAt(i*dim_puzzle+j-1).getIndice() == dim_puzzle*dim_puzzle-1) { 
 			return i*dim_puzzle+j-1;
-		} else if(j+1 < dim_puzzle && tabla.elementAt(i*dim_puzzle+j+1).getVal() == 0) {    
+		} else if(j+1 < dim_puzzle && tabla.elementAt(i*dim_puzzle+j+1).getIndice() == dim_puzzle*dim_puzzle-1) {    
 			return i*dim_puzzle+j+1;
 		} else {                                                                       
 			return -1;
@@ -113,9 +113,9 @@ public class TablaPuzzle {
 	
 	public Boolean JocFinalizat() {                         // compara indecsii tablei de lucru cu indecsii initiali (solutia)
 		int contor = 1;
-		if (this.tabla.lastElement().getVal() == 0) {                
+		if (this.tabla.lastElement().getIndice() == dim_puzzle*dim_puzzle-1) {                
 			for (int i = 0; i < dim_puzzle * dim_puzzle-1; i++) {  
-				if (this.tabla.elementAt(i).getVal() == i+1) {
+				if (this.tabla.elementAt(i).getIndice() == i) {
 					contor++;
 				}
 			}
@@ -144,7 +144,7 @@ public class TablaPuzzle {
 			}
 			System.out.println();
 		}
-		System.out.println();
+//		System.out.println();
 	}
 	
 }

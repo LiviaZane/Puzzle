@@ -24,12 +24,19 @@ public class JocPuzzle {
 		
 		Vector<CelulaPuzzle> cp = new Vector<CelulaPuzzle>(dim * dim);          
 		for (int i = 0; i < dim * dim; i++) {        
-				CelulaPuzzle celulaCurenta = new CelulaPuzzle();
+				//CelulaPuzzle celulaCurenta = new CelulaPuzzle();
+			
+				//FactoryCelulaPuzzle factory = new FactoryCelulaPuzzle(); 			// instantiere initiala
+				//CelulaPuzzle celulaCurenta = factory.creareCelulaPuzzle();		// inlocuire cu AbstractFactory (CelulaPuzzle)
+				
+				FactoryCelulaPuzzle_sterge factory = new FactoryCelulaPuzzle_sterge();
+				CelulaPuzzle_sterge celulaCurenta = (CelulaPuzzle_sterge) factory.creareCelulaPuzzle();	// inlocuire cu AbstractFactory (CelulaPuzzle_sterge)
+				
 				celulaCurenta.setIndice(i);
-				celulaCurenta.setVal(i+1);
+				celulaCurenta.setVal(Integer.toString(i+1));
 				cp.add(celulaCurenta);
 		}
-		cp.lastElement().setVal(0);                                     // setam ultimul element ca fiind zero...celula goala
+		cp.lastElement().setVal(Integer.toString(0));                                     // setam ultimul element ca fiind zero...celula goala
 		
 		int joc_nou = 0;                                               
 		do {
@@ -61,7 +68,10 @@ public class JocPuzzle {
 		tablaPuzzle.AfisareTabla();
 
 		
-		GUI_Aplicatie aplicatie = new GUI_Aplicatie(tablaPuzzle);
+		//GUI_Aplicatie aplicatie = new GUI_Aplicatie(tablaPuzzle);
+		GUI_Aplicatie aplicatie = GUI_Aplicatie.getInstance(tablaPuzzle);    //util. singleton
+		
+		
 		tablaPuzzle.adaugareObservator(aplicatie);
 		
 		
