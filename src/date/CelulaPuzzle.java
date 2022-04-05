@@ -1,20 +1,17 @@
 package date;
 
-
-
 public class CelulaPuzzle {
 
-	private int indice;                                                                 
-	private String val;       
-	
+	protected int indice;                                          // indice = lin * dim + col
+	private String val;
 
-	public CelulaPuzzle() {}                                                            
+	public CelulaPuzzle() {}                                       // constructor implicit
 
 	public int getIndice() {
-		return indice;                                                                  
+		return indice;                       // getteri si setteri ....
 	}
-                                                
-	public void setIndice(int in) {                   
+	                                         // ... necesari pentru utilizare XMLEncoder si XMLDecoder,                                               
+	public void setIndice(int in) {          // pentru salvare/restaurare obiecte in/din fisiere XML
 		this.indice = in;
 	}
 
@@ -26,7 +23,29 @@ public class CelulaPuzzle {
 		this.val = val;
 	}
 
+	
+	public static class Builder {
+		private int indice;
+		private String val;
+		
+		public Builder creazaIndice(int indice) {
+			this.indice = indice;
+			return this;
+		}
+		
+		public Builder creazaVal(String val) {
+			this.val = val;
+			return this;
+		}
+		
+		public CelulaPuzzle build() {
+			return new CelulaPuzzle(this);
+		}
+	}
+	
+	private CelulaPuzzle(Builder b) {
+		this.indice =  b.indice;
+		this.val = b.val;
+	}
+	
 }
-
-
-//

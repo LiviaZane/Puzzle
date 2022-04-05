@@ -6,12 +6,11 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
 
-
 public class Imagine {
 	
     public static BufferedImage[] spargeImagine(String a, int dim) throws Exception {
 
-    	   	
+    	   	   	
     	BufferedImage img = ImageIO.read(new File(a));
     	
     	BufferedImage imagine = resize(img, 700, 700);

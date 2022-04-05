@@ -7,10 +7,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class SalvareXML {
-														
-	public static void scrieXML(TablaPuzzle c) {	                       
+
+	public static void scrieXML(TablaPuzzle c) {	                       // salvare c (tablaPuzzle) in fisier xml
 		try {
-			XMLEncoder x = new XMLEncoder(new FileOutputStream("puzzle.xml")); 
+			XMLEncoder x = new XMLEncoder(new FileOutputStream("puzzle.xml"));
 			x.writeObject(c);
 			x.close();
 		} catch (FileNotFoundException e) {
@@ -18,15 +18,16 @@ public class SalvareXML {
 		}
 	}	
 	
-	public static TablaPuzzle citesteXML() {                      
-		TablaPuzzle cc = new TablaPuzzle();     
+	public static TablaPuzzle citesteXML() {                       // incarcare cc din fisier xml si transmiterea
+		TablaPuzzle cc = new TablaPuzzle();                                  // acestuia prin return pentru incarcare tablaPuzzle
 		try {
 			XMLDecoder xx = new XMLDecoder(new FileInputStream("puzzle.xml"));
-			cc = (TablaPuzzle)xx.readObject();							
+			cc = (TablaPuzzle)xx.readObject();
 			xx.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		return cc;
 	}
+
 }

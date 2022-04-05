@@ -4,6 +4,6 @@ import date.TablaPuzzle;
 
 public interface Observator {
 	
-	public void update (TablaPuzzle tablaPuzzle);
-
+	public void update(TablaPuzzle tablaPuzzle);
+	
 }
