@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 
 public class SalvareXML {
 
-	public static void scrieXML(TablaPuzzle c) {	                       // salvare c (tablaPuzzle) in fisier xml
+	public static void scrieXML(TablaPuzzle c) {	    // salvare c (tablaPuzzle) in fisier xml
 		try {
 			XMLEncoder x = new XMLEncoder(new FileOutputStream("puzzle.xml"));
 			x.writeObject(c);
@@ -18,8 +18,8 @@ public class SalvareXML {
 		}
 	}	
 	
-	public static TablaPuzzle citesteXML() {                       // incarcare cc din fisier xml si transmiterea
-		TablaPuzzle cc = new TablaPuzzle();                                  // acestuia prin return pentru incarcare tablaPuzzle
+	public static TablaPuzzle citesteXML() {     // incarcare cc din fisier xml si transmiterea
+		TablaPuzzle cc = new TablaPuzzle();           // acestuia prin return pentru incarcare tablaPuzzle
 		try {
 			XMLDecoder xx = new XMLDecoder(new FileInputStream("puzzle.xml"));
 			cc = (TablaPuzzle)xx.readObject();

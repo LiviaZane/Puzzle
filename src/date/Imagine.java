@@ -4,37 +4,33 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.Vector;
+
 import javax.imageio.ImageIO;
 
 public class Imagine {
 	
-    public static BufferedImage[] spargeImagine(String a, int dim) throws Exception {
-
-    	   	   	
+    public static Vector<BufferedImage> spargeImagine(String a, int dim) throws Exception {
+	   	
     	BufferedImage img = ImageIO.read(new File(a));
-    	
-    	BufferedImage imagine = resize(img, 700, 700);
+    	BufferedImage imagine = resize(img, 650, 650);
 
         int latime = imagine.getWidth() / dim;                                           
         int inaltime = imagine.getHeight() / dim;
-        int index_subimg = 0;                                                            
-        BufferedImage imagini[] = new BufferedImage[dim * dim];                          //vector in care vom stoca subImaginile
+                                                            
+        Vector<BufferedImage> imagini = new Vector<>(dim * dim);  //vector in care vom stoca subImaginile
         
-        int x = 0;                                                                       
-		int y = 0;
-
+        int x = 0, y = 0; // indecsi pentru lin (x) si col (y) aferenti matricei dupa care se decupeaza
 		for (int i = 0; i < dim; i++) {
 			y = 0;
             for (int j = 0; j < dim; j++) {
-                imagini[index_subimg] = imagine.getSubimage(y, x, latime, inaltime);
-                index_subimg++;
+            	imagini.add(imagine.getSubimage(y, x, latime, inaltime));
                 y += latime;
             }
             x += inaltime;
         }
 
-        return imagini;
-        
+        return imagini; 
     }
     
     private static BufferedImage resize(BufferedImage img, int height, int width) {

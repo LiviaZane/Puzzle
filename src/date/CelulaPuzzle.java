@@ -1,6 +1,6 @@
 package date;
 
-public class CelulaPuzzle {
+public class CelulaPuzzle implements Celula {
 
 	protected int indice;                                          // indice = lin * dim + col
 	private String val;
@@ -10,7 +10,8 @@ public class CelulaPuzzle {
 	public int getIndice() {
 		return indice;                       // getteri si setteri ....
 	}
-	                                         // ... necesari pentru utilizare XMLEncoder si XMLDecoder,                                               
+	
+	@Override                               // ... necesari pentru utilizare XMLEncoder si XMLDecoder,                                               
 	public void setIndice(int in) {          // pentru salvare/restaurare obiecte in/din fisiere XML
 		this.indice = in;
 	}
@@ -19,11 +20,13 @@ public class CelulaPuzzle {
 		return val;
 	}
 
+	@Override
 	public void setVal(String val) {
 		this.val = val;
 	}
 
 	
+	// implementare sablon Builder
 	public static class Builder {
 		private int indice;
 		private String val;
@@ -47,5 +50,6 @@ public class CelulaPuzzle {
 		this.indice =  b.indice;
 		this.val = b.val;
 	}
+	// terminare implementare sablon Builder
 	
 }
