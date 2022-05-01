@@ -20,7 +20,8 @@ import javax.swing.JOptionPane;
 
 import date.CelulaPuzzle;
 import date.Imagine;
-import date.SalvareXML;
+import date.MementoRestore;
+import date.MementoTablaPuzzle;
 import date.TablaPuzzle;
 
 public class ActionListenerINCARCA extends GUI_Aplicatie implements ActionListener {
@@ -29,17 +30,18 @@ public class ActionListenerINCARCA extends GUI_Aplicatie implements ActionListen
 	
 	public ActionListenerINCARCA(TablaPuzzle tablaPuzz) {
 		tablaPuzzle = tablaPuzz;
+		
 	}
-	
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		try {
 	         File fisier = new File("puzzle.xml");
-	         if (fisier.exists()) {                                         // daca fisierul exista pe disc
-	        	 TablaPuzzle tablaPuzz = SalvareXML.citesteXML();           // citesc din XML
+	         if (fisier.exists()) {                  // daca fisierul exista pe disc, citesc din XML
+	        	 MementoTablaPuzzle memento = MementoRestore.RestoreXML();            // Sablon MEMENTO
 	        	 tablaPuzzle.getTabla().clear();
-	        	 tablaPuzzle.setTabla(tablaPuzz.getTabla());
-				 dim_puzz = tablaPuzz.getDim_puzzle();
+	        	 tablaPuzzle.setTabla(memento.getTabla_memento());
+				 dim_puzz = memento.getDim_puzzle_memento();
 				 tablaPuzzle.setDim_puzzle(dim_puzz);
 					// spargere imagine
 					if(rb2.isSelected()) {
@@ -51,19 +53,19 @@ public class ActionListenerINCARCA extends GUI_Aplicatie implements ActionListen
 							ee.printStackTrace();
 						}
 						File director1 = new File("img/");
-						FilenameFilter filtru1 = new FilenameFilter() { // filtru pentru fisiere cu extensia png
+						FilenameFilter filtru1 = new FilenameFilter() {//filtru pt.fisiere cu extensia png
 							@Override
 							public boolean accept(File f, String s) {
 								return s.endsWith(".png");
 							}
 						};
-						File fisiere1[] = director1.listFiles(filtru1);                // stergem fisierele .png
+						File fisiere1[] = director1.listFiles(filtru1);      // stergem fisierele png
 						for(File fis : fisiere1) {
 							fis.delete();
 						}
-						//scriem subImaginile
+						//scriem subImaginile .... in fisiere cu extensie png
 						int ii = 1;                 //index nume fisier
-						Iterator<BufferedImage> it = imagini.iterator();             // utilizare SABLON ITERATOR
+						Iterator<BufferedImage> it = imagini.iterator();    // utilizare Sablon ITERATOR
 						while(it.hasNext()) {
 							try {
 								ImageIO.write(it.next(), "png", new File("img/",ii++ + ".png"));
@@ -71,11 +73,11 @@ public class ActionListenerINCARCA extends GUI_Aplicatie implements ActionListen
 								eee.printStackTrace();
 							}
 						}
-					}// terminat cu imaginile
-					panel.removeAll();  // stergem JButoanele din panel
+					}        // terminat cu imaginile
+					panel.removeAll();                 // stergem JButoanele din panel
 					int i = 0, j = 0;
 					Iterator<CelulaPuzzle> it = tablaPuzzle.getTabla().iterator();
-					while(it.hasNext()) {                                             // utilizare SABLON ITERATOR
+					while(it.hasNext()) {                                    // utilizare Sablon ITERATOR
 						CelulaPuzzle tmp = it.next();
 						String a = tmp.getVal();
 						JButton b = new JButton();

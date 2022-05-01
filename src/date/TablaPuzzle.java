@@ -31,7 +31,7 @@ public class TablaPuzzle {
 		this.dim_puzzle = dim_puzzle;
 	}
 
-	
+
 	public void adaugaObservator(Observator o) {
 		observatori.add(o);
 	}

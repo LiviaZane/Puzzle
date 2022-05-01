@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="17.0.2" class="java.beans.XMLDecoder">
  <object class="date.TablaPuzzle">
+  <void property="dim_puzzle">
+   <int>9</int>
+  </void>
   <void property="tabla">
    <object class="java.util.Vector">
     <void method="add">
      <object class="date.CelulaPuzzle">
       <void property="val">
-       <int>1</int>
+       <string>1</string>
       </void>
      </object>
     </void>
@@ -16,7 +19,7 @@
        <int>1</int>
       </void>
       <void property="val">
-       <int>2</int>
+       <string>2</string>
       </void>
      </object>
     </void>
@@ -26,7 +29,7 @@
        <int>2</int>
       </void>
       <void property="val">
-       <int>3</int>
+       <string>3</string>
       </void>
      </object>
     </void>
@@ -36,7 +39,7 @@
        <int>3</int>
       </void>
       <void property="val">
-       <int>4</int>
+       <string>4</string>
       </void>
      </object>
     </void>
@@ -46,7 +49,7 @@
        <int>4</int>
       </void>
       <void property="val">
-       <int>5</int>
+       <string>5</string>
       </void>
      </object>
     </void>
@@ -56,7 +59,7 @@
        <int>5</int>
       </void>
       <void property="val">
-       <int>6</int>
+       <string>6</string>
       </void>
      </object>
     </void>
@@ -66,7 +69,7 @@
        <int>6</int>
       </void>
       <void property="val">
-       <int>7</int>
+       <string>7</string>
       </void>
      </object>
     </void>
@@ -76,7 +79,7 @@
        <int>7</int>
       </void>
       <void property="val">
-       <int>8</int>
+       <string>8</string>
       </void>
      </object>
     </void>
@@ -86,7 +89,7 @@
        <int>8</int>
       </void>
       <void property="val">
-       <int>9</int>
+       <string>9</string>
       </void>
      </object>
     </void>
@@ -96,7 +99,7 @@
        <int>9</int>
       </void>
       <void property="val">
-       <int>10</int>
+       <string>10</string>
       </void>
      </object>
     </void>
@@ -106,7 +109,7 @@
        <int>10</int>
       </void>
       <void property="val">
-       <int>11</int>
+       <string>11</string>
       </void>
      </object>
     </void>
@@ -116,7 +119,7 @@
        <int>11</int>
       </void>
       <void property="val">
-       <int>12</int>
+       <string>12</string>
       </void>
      </object>
     </void>
@@ -126,7 +129,7 @@
        <int>12</int>
       </void>
       <void property="val">
-       <int>13</int>
+       <string>13</string>
       </void>
      </object>
     </void>
@@ -136,7 +139,7 @@
        <int>13</int>
       </void>
       <void property="val">
-       <int>14</int>
+       <string>14</string>
       </void>
      </object>
     </void>
@@ -146,7 +149,7 @@
        <int>14</int>
       </void>
       <void property="val">
-       <int>15</int>
+       <string>15</string>
       </void>
      </object>
     </void>
@@ -156,7 +159,7 @@
        <int>15</int>
       </void>
       <void property="val">
-       <int>16</int>
+       <string>16</string>
       </void>
      </object>
     </void>
@@ -166,7 +169,7 @@
        <int>16</int>
       </void>
       <void property="val">
-       <int>17</int>
+       <string>17</string>
       </void>
      </object>
     </void>
@@ -176,7 +179,7 @@
        <int>17</int>
       </void>
       <void property="val">
-       <int>18</int>
+       <string>18</string>
       </void>
      </object>
     </void>
@@ -186,7 +189,7 @@
        <int>18</int>
       </void>
       <void property="val">
-       <int>19</int>
+       <string>19</string>
       </void>
      </object>
     </void>
@@ -196,7 +199,7 @@
        <int>19</int>
       </void>
       <void property="val">
-       <int>20</int>
+       <string>20</string>
       </void>
      </object>
     </void>
@@ -206,7 +209,7 @@
        <int>20</int>
       </void>
       <void property="val">
-       <int>21</int>
+       <string>21</string>
       </void>
      </object>
     </void>
@@ -216,7 +219,7 @@
        <int>21</int>
       </void>
       <void property="val">
-       <int>22</int>
+       <string>22</string>
       </void>
      </object>
     </void>
@@ -226,7 +229,7 @@
        <int>22</int>
       </void>
       <void property="val">
-       <int>23</int>
+       <string>23</string>
       </void>
      </object>
     </void>
@@ -236,7 +239,7 @@
        <int>23</int>
       </void>
       <void property="val">
-       <int>24</int>
+       <string>24</string>
       </void>
      </object>
     </void>
@@ -246,7 +249,7 @@
        <int>24</int>
       </void>
       <void property="val">
-       <int>25</int>
+       <string>25</string>
       </void>
      </object>
     </void>
@@ -256,7 +259,7 @@
        <int>25</int>
       </void>
       <void property="val">
-       <int>26</int>
+       <string>26</string>
       </void>
      </object>
     </void>
@@ -266,7 +269,7 @@
        <int>26</int>
       </void>
       <void property="val">
-       <int>27</int>
+       <string>27</string>
       </void>
      </object>
     </void>
@@ -276,7 +279,7 @@
        <int>27</int>
       </void>
       <void property="val">
-       <int>28</int>
+       <string>28</string>
       </void>
      </object>
     </void>
@@ -286,7 +289,7 @@
        <int>28</int>
       </void>
       <void property="val">
-       <int>29</int>
+       <string>29</string>
       </void>
      </object>
     </void>
@@ -296,7 +299,7 @@
        <int>29</int>
       </void>
       <void property="val">
-       <int>30</int>
+       <string>30</string>
       </void>
      </object>
     </void>
@@ -306,7 +309,7 @@
        <int>30</int>
       </void>
       <void property="val">
-       <int>31</int>
+       <string>31</string>
       </void>
      </object>
     </void>
@@ -316,7 +319,7 @@
        <int>31</int>
       </void>
       <void property="val">
-       <int>32</int>
+       <string>32</string>
       </void>
      </object>
     </void>
@@ -326,7 +329,7 @@
        <int>32</int>
       </void>
       <void property="val">
-       <int>33</int>
+       <string>33</string>
       </void>
      </object>
     </void>
@@ -336,7 +339,7 @@
        <int>33</int>
       </void>
       <void property="val">
-       <int>34</int>
+       <string>34</string>
       </void>
      </object>
     </void>
@@ -346,7 +349,7 @@
        <int>34</int>
       </void>
       <void property="val">
-       <int>35</int>
+       <string>35</string>
       </void>
      </object>
     </void>
@@ -356,7 +359,7 @@
        <int>35</int>
       </void>
       <void property="val">
-       <int>36</int>
+       <string>36</string>
       </void>
      </object>
     </void>
@@ -366,7 +369,7 @@
        <int>36</int>
       </void>
       <void property="val">
-       <int>37</int>
+       <string>37</string>
       </void>
      </object>
     </void>
@@ -376,7 +379,7 @@
        <int>37</int>
       </void>
       <void property="val">
-       <int>38</int>
+       <string>38</string>
       </void>
      </object>
     </void>
@@ -386,7 +389,7 @@
        <int>38</int>
       </void>
       <void property="val">
-       <int>39</int>
+       <string>39</string>
       </void>
      </object>
     </void>
@@ -396,7 +399,7 @@
        <int>39</int>
       </void>
       <void property="val">
-       <int>40</int>
+       <string>40</string>
       </void>
      </object>
     </void>
@@ -406,7 +409,7 @@
        <int>40</int>
       </void>
       <void property="val">
-       <int>41</int>
+       <string>41</string>
       </void>
      </object>
     </void>
@@ -416,7 +419,7 @@
        <int>41</int>
       </void>
       <void property="val">
-       <int>42</int>
+       <string>42</string>
       </void>
      </object>
     </void>
@@ -426,7 +429,7 @@
        <int>42</int>
       </void>
       <void property="val">
-       <int>43</int>
+       <string>43</string>
       </void>
      </object>
     </void>
@@ -436,7 +439,7 @@
        <int>43</int>
       </void>
       <void property="val">
-       <int>44</int>
+       <string>44</string>
       </void>
      </object>
     </void>
@@ -446,7 +449,7 @@
        <int>44</int>
       </void>
       <void property="val">
-       <int>45</int>
+       <string>45</string>
       </void>
      </object>
     </void>
@@ -456,7 +459,7 @@
        <int>45</int>
       </void>
       <void property="val">
-       <int>46</int>
+       <string>46</string>
       </void>
      </object>
     </void>
@@ -466,7 +469,7 @@
        <int>46</int>
       </void>
       <void property="val">
-       <int>47</int>
+       <string>47</string>
       </void>
      </object>
     </void>
@@ -476,7 +479,7 @@
        <int>47</int>
       </void>
       <void property="val">
-       <int>48</int>
+       <string>48</string>
       </void>
      </object>
     </void>
@@ -486,7 +489,7 @@
        <int>48</int>
       </void>
       <void property="val">
-       <int>49</int>
+       <string>49</string>
       </void>
      </object>
     </void>
@@ -496,7 +499,7 @@
        <int>49</int>
       </void>
       <void property="val">
-       <int>50</int>
+       <string>50</string>
       </void>
      </object>
     </void>
@@ -506,7 +509,7 @@
        <int>50</int>
       </void>
       <void property="val">
-       <int>51</int>
+       <string>51</string>
       </void>
      </object>
     </void>
@@ -516,7 +519,7 @@
        <int>51</int>
       </void>
       <void property="val">
-       <int>52</int>
+       <string>52</string>
       </void>
      </object>
     </void>
@@ -526,7 +529,7 @@
        <int>52</int>
       </void>
       <void property="val">
-       <int>53</int>
+       <string>53</string>
       </void>
      </object>
     </void>
@@ -536,7 +539,7 @@
        <int>53</int>
       </void>
       <void property="val">
-       <int>54</int>
+       <string>54</string>
       </void>
      </object>
     </void>
@@ -546,7 +549,7 @@
        <int>54</int>
       </void>
       <void property="val">
-       <int>55</int>
+       <string>55</string>
       </void>
      </object>
     </void>
@@ -556,7 +559,7 @@
        <int>55</int>
       </void>
       <void property="val">
-       <int>56</int>
+       <string>56</string>
       </void>
      </object>
     </void>
@@ -566,7 +569,7 @@
        <int>56</int>
       </void>
       <void property="val">
-       <int>57</int>
+       <string>57</string>
       </void>
      </object>
     </void>
@@ -576,7 +579,7 @@
        <int>57</int>
       </void>
       <void property="val">
-       <int>58</int>
+       <string>58</string>
       </void>
      </object>
     </void>
@@ -586,7 +589,7 @@
        <int>58</int>
       </void>
       <void property="val">
-       <int>59</int>
+       <string>59</string>
       </void>
      </object>
     </void>
@@ -596,7 +599,7 @@
        <int>59</int>
       </void>
       <void property="val">
-       <int>60</int>
+       <string>60</string>
       </void>
      </object>
     </void>
@@ -606,7 +609,7 @@
        <int>60</int>
       </void>
       <void property="val">
-       <int>61</int>
+       <string>61</string>
       </void>
      </object>
     </void>
@@ -616,7 +619,7 @@
        <int>61</int>
       </void>
       <void property="val">
-       <int>62</int>
+       <string>62</string>
       </void>
      </object>
     </void>
@@ -626,7 +629,7 @@
        <int>62</int>
       </void>
       <void property="val">
-       <int>63</int>
+       <string>63</string>
       </void>
      </object>
     </void>
@@ -636,7 +639,7 @@
        <int>63</int>
       </void>
       <void property="val">
-       <int>64</int>
+       <string>64</string>
       </void>
      </object>
     </void>
@@ -646,7 +649,7 @@
        <int>64</int>
       </void>
       <void property="val">
-       <int>65</int>
+       <string>65</string>
       </void>
      </object>
     </void>
@@ -656,7 +659,7 @@
        <int>65</int>
       </void>
       <void property="val">
-       <int>66</int>
+       <string>66</string>
       </void>
      </object>
     </void>
@@ -666,7 +669,7 @@
        <int>66</int>
       </void>
       <void property="val">
-       <int>67</int>
+       <string>67</string>
       </void>
      </object>
     </void>
@@ -676,7 +679,7 @@
        <int>67</int>
       </void>
       <void property="val">
-       <int>68</int>
+       <string>68</string>
       </void>
      </object>
     </void>
@@ -686,7 +689,7 @@
        <int>68</int>
       </void>
       <void property="val">
-       <int>69</int>
+       <string>69</string>
       </void>
      </object>
     </void>
@@ -696,7 +699,7 @@
        <int>69</int>
       </void>
       <void property="val">
-       <int>70</int>
+       <string>70</string>
       </void>
      </object>
     </void>
@@ -706,7 +709,7 @@
        <int>70</int>
       </void>
       <void property="val">
-       <int>71</int>
+       <string>71</string>
       </void>
      </object>
     </void>
@@ -716,7 +719,7 @@
        <int>71</int>
       </void>
       <void property="val">
-       <int>72</int>
+       <string>72</string>
       </void>
      </object>
     </void>
@@ -726,7 +729,7 @@
        <int>72</int>
       </void>
       <void property="val">
-       <int>73</int>
+       <string>73</string>
       </void>
      </object>
     </void>
@@ -736,7 +739,7 @@
        <int>73</int>
       </void>
       <void property="val">
-       <int>74</int>
+       <string>74</string>
       </void>
      </object>
     </void>
@@ -746,7 +749,7 @@
        <int>74</int>
       </void>
       <void property="val">
-       <int>75</int>
+       <string>75</string>
       </void>
      </object>
     </void>
@@ -756,7 +759,7 @@
        <int>75</int>
       </void>
       <void property="val">
-       <int>76</int>
+       <string>76</string>
       </void>
      </object>
     </void>
@@ -766,7 +769,7 @@
        <int>76</int>
       </void>
       <void property="val">
-       <int>77</int>
+       <string>77</string>
       </void>
      </object>
     </void>
@@ -776,7 +779,7 @@
        <int>77</int>
       </void>
       <void property="val">
-       <int>78</int>
+       <string>78</string>
       </void>
      </object>
     </void>
@@ -786,7 +789,7 @@
        <int>78</int>
       </void>
       <void property="val">
-       <int>79</int>
+       <string>79</string>
       </void>
      </object>
     </void>
@@ -794,6 +797,9 @@
      <object class="date.CelulaPuzzle">
       <void property="indice">
        <int>80</int>
+      </void>
+      <void property="val">
+       <string>0</string>
       </void>
      </object>
     </void>
@@ -803,7 +809,7 @@
        <int>79</int>
       </void>
       <void property="val">
-       <int>80</int>
+       <string>80</string>
       </void>
      </object>
     </void>

@@ -8,11 +8,11 @@ public class CelulaPuzzle implements Celula {
 	public CelulaPuzzle() {}                                       // constructor implicit
 
 	public int getIndice() {
-		return indice;                       // getteri si setteri ....
+		return indice;                         // getteri si setteri ....
 	}
 	
-	@Override                               // ... necesari pentru utilizare XMLEncoder si XMLDecoder,                                               
-	public void setIndice(int in) {          // pentru salvare/restaurare obiecte in/din fisiere XML
+	@Override                                  // ... necesari pentru utilizare XMLEncoder si XMLDecoder,                                               
+	public void setIndice(int in) {            // pentru salvare/restaurare obiecte in/din fisiere XML
 		this.indice = in;
 	}
 

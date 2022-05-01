@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="17.0.2" class="java.beans.XMLDecoder">
  <object class="date.TablaPuzzle">
+  <void property="dim_puzzle">
+   <int>5</int>
+  </void>
   <void property="tabla">
    <object class="java.util.Vector">
     <void method="add">
      <object class="date.CelulaPuzzle">
       <void property="val">
-       <int>1</int>
+       <string>1</string>
       </void>
      </object>
     </void>
@@ -16,7 +19,7 @@
        <int>1</int>
       </void>
       <void property="val">
-       <int>2</int>
+       <string>2</string>
       </void>
      </object>
     </void>
@@ -26,7 +29,7 @@
        <int>2</int>
       </void>
       <void property="val">
-       <int>3</int>
+       <string>3</string>
       </void>
      </object>
     </void>
@@ -36,7 +39,7 @@
        <int>3</int>
       </void>
       <void property="val">
-       <int>4</int>
+       <string>4</string>
       </void>
      </object>
     </void>
@@ -46,7 +49,7 @@
        <int>4</int>
       </void>
       <void property="val">
-       <int>5</int>
+       <string>5</string>
       </void>
      </object>
     </void>
@@ -56,7 +59,7 @@
        <int>5</int>
       </void>
       <void property="val">
-       <int>6</int>
+       <string>6</string>
       </void>
      </object>
     </void>
@@ -66,7 +69,7 @@
        <int>6</int>
       </void>
       <void property="val">
-       <int>7</int>
+       <string>7</string>
       </void>
      </object>
     </void>
@@ -76,7 +79,7 @@
        <int>7</int>
       </void>
       <void property="val">
-       <int>8</int>
+       <string>8</string>
       </void>
      </object>
     </void>
@@ -86,7 +89,7 @@
        <int>8</int>
       </void>
       <void property="val">
-       <int>9</int>
+       <string>9</string>
       </void>
      </object>
     </void>
@@ -96,7 +99,7 @@
        <int>9</int>
       </void>
       <void property="val">
-       <int>10</int>
+       <string>10</string>
       </void>
      </object>
     </void>
@@ -106,7 +109,7 @@
        <int>10</int>
       </void>
       <void property="val">
-       <int>11</int>
+       <string>11</string>
       </void>
      </object>
     </void>
@@ -116,7 +119,7 @@
        <int>11</int>
       </void>
       <void property="val">
-       <int>12</int>
+       <string>12</string>
       </void>
      </object>
     </void>
@@ -126,7 +129,7 @@
        <int>12</int>
       </void>
       <void property="val">
-       <int>13</int>
+       <string>13</string>
       </void>
      </object>
     </void>
@@ -136,7 +139,7 @@
        <int>13</int>
       </void>
       <void property="val">
-       <int>14</int>
+       <string>14</string>
       </void>
      </object>
     </void>
@@ -146,7 +149,7 @@
        <int>14</int>
       </void>
       <void property="val">
-       <int>15</int>
+       <string>15</string>
       </void>
      </object>
     </void>
@@ -156,7 +159,7 @@
        <int>15</int>
       </void>
       <void property="val">
-       <int>16</int>
+       <string>16</string>
       </void>
      </object>
     </void>
@@ -166,7 +169,7 @@
        <int>16</int>
       </void>
       <void property="val">
-       <int>17</int>
+       <string>17</string>
       </void>
      </object>
     </void>
@@ -176,7 +179,7 @@
        <int>17</int>
       </void>
       <void property="val">
-       <int>18</int>
+       <string>18</string>
       </void>
      </object>
     </void>
@@ -186,47 +189,7 @@
        <int>18</int>
       </void>
       <void property="val">
-       <int>19</int>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="date.CelulaPuzzle">
-      <void property="indice">
-       <int>19</int>
-      </void>
-      <void property="val">
-       <int>20</int>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="date.CelulaPuzzle">
-      <void property="indice">
-       <int>20</int>
-      </void>
-      <void property="val">
-       <int>21</int>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="date.CelulaPuzzle">
-      <void property="indice">
-       <int>21</int>
-      </void>
-      <void property="val">
-       <int>22</int>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="date.CelulaPuzzle">
-      <void property="indice">
-       <int>22</int>
-      </void>
-      <void property="val">
-       <int>23</int>
+       <string>19</string>
       </void>
      </object>
     </void>
@@ -234,6 +197,39 @@
      <object class="date.CelulaPuzzle">
       <void property="indice">
        <int>24</int>
+      </void>
+      <void property="val">
+       <string>0</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>20</int>
+      </void>
+      <void property="val">
+       <string>21</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>21</int>
+      </void>
+      <void property="val">
+       <string>22</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>22</int>
+      </void>
+      <void property="val">
+       <string>23</string>
       </void>
      </object>
     </void>
@@ -243,7 +239,17 @@
        <int>23</int>
       </void>
       <void property="val">
-       <int>24</int>
+       <string>24</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="date.CelulaPuzzle">
+      <void property="indice">
+       <int>19</int>
+      </void>
+      <void property="val">
+       <string>20</string>
       </void>
      </object>
     </void>

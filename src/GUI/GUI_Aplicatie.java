@@ -17,8 +17,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+
 import date.CelulaPuzzle;
 import date.TablaPuzzle;
+import IA.Solutie;
 
 public class GUI_Aplicatie implements Observator {
 	protected static JFrame frame;         // mosteniri in subclase/extends....ActList RB, START, etc
@@ -32,6 +35,8 @@ public class GUI_Aplicatie implements Observator {
 	protected static JButton btn2;
 	protected static JButton btn3;
 	protected static JButton btn4;
+	protected static JTextArea text_solutie;
+	protected static JTextArea text_solutie2;
 	
 	private static GUI_Aplicatie instance;                                            // Singleton
 	public static GUI_Aplicatie getInstance(TablaPuzzle tablaPuzzle){
@@ -160,6 +165,50 @@ public class GUI_Aplicatie implements Observator {
 				j = 0;
 			}
 		}
+		
+		JButton btn5 = new JButton("Solutie A-star Hamming");
+		btn5.setBounds(710, 460, 165, 30);
+		btn5.setMargin(new Insets(0, 0, 0, 0));
+		btn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int[][] tabla_int = new int[dim_puzz][dim_puzz];
+				for (int ii = 0; ii < dim_puzz; ii++) {
+					for (int jj = 0; jj < dim_puzz; jj++) {
+						tabla_int[ii][jj] = Integer.parseInt(tablaPuzzle.getTabla().elementAt(ii*dim_puzz+jj).getVal());
+					}
+				}
+				text_solutie.setText(Solutie.solutiePuzzle(tabla_int, "Hamming"));
+			}
+		});
+		frame.add(btn5);
+		
+		JButton btn6 = new JButton("Solutie A-star Manhattan");
+		btn6.setBounds(880, 460, 165, 30);
+		btn6.setMargin(new Insets(0, 0, 0, 0));
+		btn6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int[][] tabla_int = new int[dim_puzz][dim_puzz];
+				for (int ii = 0; ii < dim_puzz; ii++) {
+					for (int jj = 0; jj < dim_puzz; jj++) {
+						tabla_int[ii][jj] = Integer.parseInt(tablaPuzzle.getTabla().elementAt(ii*dim_puzz+jj).getVal());
+					}
+				}
+				text_solutie2.setText(Solutie.solutiePuzzle(tabla_int, "Manhattan"));
+			}
+		});
+		frame.add(btn6);
+				
+		text_solutie = new JTextArea();             // afisare solutie Hamming
+		text_solutie.setBounds(710,500,165,75);
+		text_solutie.setLineWrap(true);
+        frame.add(text_solutie);  
+	    frame.setVisible(true);
+	    
+	    text_solutie2 = new JTextArea();               // afisare solutie Manhattan
+		text_solutie2.setBounds(880,500,165,75);
+		text_solutie2.setLineWrap(true);
+        frame.add(text_solutie2);  
+        
 	    frame.setVisible(true);
 	}                               // end initGUI
 	
@@ -193,7 +242,7 @@ public class GUI_Aplicatie implements Observator {
 					j = 0;
 				}
 			}
-		frame.repaint();
+			frame.repaint();
 	}
 
 }
