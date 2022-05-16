@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
@@ -88,6 +89,8 @@ public class GUI_Aplicatie implements Observator {
 		cmb.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn1.setEnabled(true);
+				text_solutie.setText("");
+				text_solutie2.setText("");
 			}
 		});
 		frame.add(cmb);
@@ -171,13 +174,19 @@ public class GUI_Aplicatie implements Observator {
 		btn5.setMargin(new Insets(0, 0, 0, 0));
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				text_solutie.setText("");
 				int[][] tabla_int = new int[dim_puzz][dim_puzz];
 				for (int ii = 0; ii < dim_puzz; ii++) {
 					for (int jj = 0; jj < dim_puzz; jj++) {
 						tabla_int[ii][jj] = Integer.parseInt(tablaPuzzle.getTabla().elementAt(ii*dim_puzz+jj).getVal());
 					}
 				}
-				text_solutie.setText(Solutie.solutiePuzzle(tabla_int, "Hamming"));
+				try {
+					text_solutie.setText(Solutie.solutiePuzzle(tabla_int, "Hamming"));
+				}
+				catch (Exception ee) {
+					JOptionPane.showMessageDialog(frame, "Prea multe nivele de cautare (out of memory heap space)....mai rezolvati din puzzle");
+				}
 			}
 		});
 		frame.add(btn5);
@@ -187,13 +196,19 @@ public class GUI_Aplicatie implements Observator {
 		btn6.setMargin(new Insets(0, 0, 0, 0));
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				text_solutie2.setText("");
 				int[][] tabla_int = new int[dim_puzz][dim_puzz];
 				for (int ii = 0; ii < dim_puzz; ii++) {
 					for (int jj = 0; jj < dim_puzz; jj++) {
 						tabla_int[ii][jj] = Integer.parseInt(tablaPuzzle.getTabla().elementAt(ii*dim_puzz+jj).getVal());
 					}
 				}
-				text_solutie2.setText(Solutie.solutiePuzzle(tabla_int, "Manhattan"));
+				try {
+					text_solutie2.setText(Solutie.solutiePuzzle(tabla_int, "Manhattan"));
+				}
+				catch (Exception eee) {
+					JOptionPane.showMessageDialog(frame, "Prea multe nivele de cautare (out of memory heap space)....mai rezolvati din puzzle");
+				}
 			}
 		});
 		frame.add(btn6);

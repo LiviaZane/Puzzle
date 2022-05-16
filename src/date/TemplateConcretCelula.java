@@ -18,7 +18,8 @@ public class TemplateConcretCelula extends TemplateCelula { // se foloseste doar
 	}
 
 	@Override
-	CelulaPuzzle getCelula() {
+	public CelulaPuzzle getCelula() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

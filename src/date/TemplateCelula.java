@@ -2,8 +2,8 @@ package date;
 
 public abstract class TemplateCelula {
 	
-	abstract void setVal(String string);
-	abstract void setIndice(int i);
-	abstract CelulaPuzzle getCelula();
+	public abstract void setVal(String string);
+	public abstract void setIndice(int i);
+	public abstract CelulaPuzzle getCelula();
 	
 }

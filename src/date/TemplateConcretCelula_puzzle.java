@@ -19,7 +19,7 @@ public class TemplateConcretCelula_puzzle extends TemplateCelula {
 	}
 
 	@Override
-	CelulaPuzzle getCelula() {
+	public CelulaPuzzle getCelula() {
 		return celula_sterge;
 	}
 

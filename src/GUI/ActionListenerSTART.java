@@ -15,9 +15,18 @@ import java.util.Vector;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+
+import date.Bridge2_implementare_celulapuzzle;
+import date.Bridge3_abstract_celulapuzzle;
+import date.Bridge4_implementare_celulapuzzle_abstract;
 import date.CelulaPuzzle;
+import date.Facade;
+import date.FactoryCelulaPuzzle;
 import date.Imagine;
+import date.MediatorUser;
 import date.TablaPuzzle;
+import date.TemplateCelula;
+import date.TemplateConcretCelula_puzzle;
 
 public class ActionListenerSTART extends GUI_Aplicatie implements ActionListener {
 	
@@ -32,12 +41,37 @@ public class ActionListenerSTART extends GUI_Aplicatie implements ActionListener
 		dim_puzz = (int)cmb.getSelectedItem();
 		tablaPuzzle.setDim_puzzle(dim_puzz);
 		tablaPuzzle.getTabla().clear();
-		for (int i = 0; i < dim_puzz * dim_puzz; i++) {	              // utilizare SABLON BUILDER
-			CelulaPuzzle celulaCurenta = new CelulaPuzzle.Builder().creazaIndice(i).creazaVal(Integer.toString(i+1)).build();
-			tablaPuzzle.getTabla().add(celulaCurenta);					
+
+		for (int i = 0; i < dim_puzz * dim_puzz; i++) {
+			if (i%2 == 0) {                                                    // pentru i par, utilizez
+				FactoryCelulaPuzzle factory = new FactoryCelulaPuzzle();             // sablonul Factory
+				CelulaPuzzle celulaCurenta = factory.creareCelulaPuzzle();
+				celulaCurenta.setIndice(i);
+				celulaCurenta.setVal(Integer.toString(i+1));
+				tablaPuzzle.getTabla().add(celulaCurenta);
+			} else if (i%3 == 0) {                                  // pentru i divizibil cu 3, utilizez
+				TemplateCelula celulaTemplate = new TemplateConcretCelula_puzzle(); // sablonul Template
+				celulaTemplate.setIndice(i);
+				celulaTemplate.setVal(Integer.toString(i+1));
+				tablaPuzzle.getTabla().add(celulaTemplate.getCelula());
+			} else if (i%5 == 0) {                                  // pentru i divizibil cu 5, utilizez
+				Facade facade = new Facade();                                         // sablonul Facade
+				CelulaPuzzle celulaCurenta = facade.makeCelulaPuzzle(i);
+				tablaPuzzle.getTabla().add(celulaCurenta);
+			} else if (i%7 == 0) {                                   // pentru i divizibil cu 7, utilizez
+				MediatorUser celulaMediator_sterge = new MediatorUser("celulaSterge"); // sablon Mediator
+				celulaMediator_sterge.creazaCelulaPuzzle(0, "1");  // acest rand si cel de mai sus nu sunt folosite....doar pentru demonstrare utilizare sablon Mediator
+				MediatorUser celulaMediator = new MediatorUser("celulaNormal");
+				tablaPuzzle.getTabla().add(celulaMediator.creazaCelulaPuzzle(i, Integer.toString(i+1)));
+			} else {           // pentru alte valori ale lui i (inclusiv impar), utilizez sablonul Bridge
+				Bridge3_abstract_celulapuzzle celulaBridge = new Bridge4_implementare_celulapuzzle_abstract (
+						i, Integer.toString(i+1), new Bridge2_implementare_celulapuzzle());
+				tablaPuzzle.getTabla().add(celulaBridge.creaza_celula_puzzle());
+				
+			}
 		}
-		// spargere imagine
-		if(rb2.isSelected()) {
+
+		if(rb2.isSelected()) { // daca rb2 este selectat pe "Imagine"...spargem imaginea selectata
 			Vector<BufferedImage> imagini = new Vector<>(dim_puzz * dim_puzz);
 			String aa = "img/" + aleg_poza.getSelectedItem(); 	
 			try {
@@ -67,6 +101,7 @@ public class ActionListenerSTART extends GUI_Aplicatie implements ActionListener
 				}
 			}
 		}// terminat cu imaginile
+		
 		panel.removeAll();  // stergem JButoanele din panel
 		int i = 0, j = 0;
 		Iterator<CelulaPuzzle> it = tablaPuzzle.getTabla().iterator();

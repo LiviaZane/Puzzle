@@ -14,7 +14,7 @@ public class Solutie {
 		int r;int c;     // indecsii rand/coloana ai celulei goale
 		String cale = "";  // pentru memorare cale sus/jos/stanga/dreapta....cum au fost generati copii
 		
-		public Nod(int g,int h,int tabla[][],int r,int c, String cale){
+		public Nod(int g,int h,int tabla[][],int r,int c, String cale){  //constructorul cu parametrii
 			this.g=g;
 			this.h=h;
 			this.tabla=tabla;
@@ -24,7 +24,7 @@ public class Solutie {
 		}
 	}
 
-	 public static String solutiePuzzle(int[][] tabla, String sol) {
+	 public static String solutiePuzzle(int[][] tabla, String sol) throws Exception {
 	        int rand=0, coloana=0;                       // indecsi celula goala
 	        Set<String> nod_vizitat = new HashSet<>();   // set (lista cu elemente unice) cu hashcode
 	        
@@ -55,8 +55,8 @@ public class Solutie {
 	            int curent[][]=parinte.tabla;
 	            String cale_cur = parinte.cale;
 	            if(parinte.h==0) {                  // daca toate celulele sunt la locul lor
-	            	String solutia = parinte.g + " mutari -> " + parinte.cale;
-	            	return solutia;
+	            	String solutia = parinte.g + " mutari : " + parinte.cale;
+	            	return solutia;     // returneaza solutia, altfel return de final...fara solutie
 	            }
 	            
 	            int r=parinte.r;
@@ -73,7 +73,7 @@ public class Solutie {
 	            
 	            if(copil1!=null&&!nod_vizitat.contains(s1)){  // se verifica sa nu fie null nodul si
 	                nod_vizitat.add(s1);//sa nu existe in lista de noduri vizitate apoi se adauga la cele 2 liste
-	                String cale_jos = cale_cur + " jos"; // in functie de noul nod, se completeaza calea
+	                String cale_jos = cale_cur + "↓"; // in functie de noul nod, se completeaza calea
 	                if (sol == "Hamming")
 	                	lista_noduri.add(x.new Nod(parinte.g+1,Hamming(copil1),copil1,r+1,c, cale_jos));
 	                else
@@ -81,7 +81,7 @@ public class Solutie {
 	            }
 	            if(copil2!=null&&!nod_vizitat.contains(s2)){
 	                nod_vizitat.add(s2);
-	                String cale_sus = cale_cur + " sus";
+	                String cale_sus = cale_cur + "↑";
 	                if (sol == "Hamming")
 	                	lista_noduri.add(x.new Nod(parinte.g+1,Hamming(copil2),copil2,r-1,c, cale_sus));
 	                else
@@ -89,7 +89,7 @@ public class Solutie {
 	            }
 	            if(copil3!=null&&!nod_vizitat.contains(s3)){
 	                nod_vizitat.add(s3);
-	                String cale_dr = cale_cur + " dr";
+	                String cale_dr = cale_cur + "→";
 	                if (sol == "Hamming")
 	                	lista_noduri.add(x.new Nod(parinte.g+1,Hamming(copil3),copil3,r,c+1, cale_dr));
 	                else
@@ -97,7 +97,7 @@ public class Solutie {
 	            }
 	            if(copil4!=null&&!nod_vizitat.contains(s4)){
 	                nod_vizitat.add(s4);
-	                String cale_st = cale_cur + " st";
+	                String cale_st = cale_cur + "←";
 	                if (sol == "Hamming")
 	                	lista_noduri.add(x.new Nod(parinte.g+1,Hamming(copil4),copil4,r,c-1, cale_st));
 	                else
@@ -105,7 +105,7 @@ public class Solutie {
 	            }
 	        }
 	        
-	        return "Nu are solutie sau prea multe nivele de cautare (out of memory heap space)";
+	        return "Prea multe nivele de cautare (out of memory heap space)....mai rezolvati din puzzle";
 	    }
 	    
 	    // numarul de celule care nu sunt la locul lor (conform solutiei)
@@ -139,7 +139,7 @@ public class Solutie {
 	    	return count;
 	    }
 
-	    public static String hash(int tabla[][]){
+	    public static String hash(int tabla[][]) throws Exception {
 	        if(tabla==null)return "";
 	        StringBuilder str = new StringBuilder();
 	         for(int i=0;i<tabla.length;i++){
@@ -150,7 +150,7 @@ public class Solutie {
 	        return str.toString();
 	    }
 	    
-	    public static int[][] copie(int tabla[][]){
+	    public static int[][] copie(int tabla[][]){  // pentru adaugare la lista de noduri si la vizitate
 	    	int r=tabla.length;
 	        int c=tabla[0].length;
 	        int copie_tabla[][]=new int[r][c];
